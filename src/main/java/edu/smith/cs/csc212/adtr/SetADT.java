@@ -19,6 +19,7 @@ public abstract class SetADT<ItemType> implements Iterable<ItemType> {
 	 * @return the number of unique items added to the set.
 	 */
 	public abstract int size();
+	
 
 	/**
 	 * Add a element to this set if new/unique.

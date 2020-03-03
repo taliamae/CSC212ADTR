@@ -21,4 +21,41 @@ public class JavaMapTest {
 		assertEquals(empty.size(), 0);
 		//Assert.assert
 	}
+	
+	@Test
+	public void testPut() {
+		MapADT<String, String> one = new JavaMap<>();
+		one.put("orange", "fruit");
+		assertEquals(one.size(), 1);
+		
+	}
+	
+	@Test
+	public void testGet() {
+		MapADT<String, String> two = new JavaMap<>();
+		two.put("orange", "fruit");
+		two.put("apple", "fruit");
+		two.put("cucumber", "vegetable");
+		assertEquals(two.get("orange"), "fruit");
+	}
+	
+	@Test
+	public void testSize() {
+		MapADT<String, String> size = new JavaMap<>();
+		size.put("orange", "fruit");
+		size.put("apple", "fruit");
+		size.put("cucumber", "vegetable");
+		assertEquals(size.size(), 3);
+	}
+	
+	@Test
+	public void testRemove() {
+		MapADT<String, String> remove = new JavaMap<>();
+		remove.put("orange", "fruit");
+		remove.put("apple", "fruit");
+		remove.put("cucumber", "vegetable");
+		remove.remove("orange");
+		assertEquals(remove.size(), 2);
+		
+	}
 }

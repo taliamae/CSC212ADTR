@@ -80,10 +80,9 @@ public class JavaList<T> extends ListADT<T> {
 	}
 
 	@Override
+	// Error was here, addBack method was before only adding items that were not duplicates
 	public void addBack(T value) {
-		if (!inner.contains(value)) {
-			inner.add(value);		
-		}
+		inner.add(inner.size(), value);		
 	}
 
 	@Override
